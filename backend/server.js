@@ -296,27 +296,14 @@ app.delete('/api/products/:id', authenticateToken, async (req, res) => {
         });
     }
 });
-
 // Start server
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
     console.log(`Server started on port ${PORT}`);
 });
-
-// Database connection with cleanup
+// Database connection 
 mongoose.connect(process.env.MONGODB_URI)
     .then(async () => {
         console.log('Connected to MongoDB');
-        
-        try {
-            // Drop the products collection to start fresh
-            await mongoose.connection.db.dropCollection('products')
-                .then(() => console.log('Products collection dropped'))
-                .catch(err => console.log('No products collection to drop'));
-
-            console.log('Database cleanup completed');
-        } catch (error) {
-            console.error('Database cleanup error:', error);
-        }
     })
     .catch(err => console.error('MongoDB connection error:', err));
