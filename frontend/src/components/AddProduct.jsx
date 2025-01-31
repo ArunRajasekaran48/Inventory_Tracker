@@ -34,9 +34,10 @@ function AddProduct() {
         price: parseFloat(formData.price),
         quantity: parseInt(formData.quantity)
       };
+    //  https://inventory-tracker-0ie0.onrender.com
 
       const token = localStorage.getItem('token');
-      const response = await axios.post('https://inventory-tracker-sre9.onrender.com/api/products', productData, {
+      const response = await axios.post('https://inventory-tracker-0ie0.onrender.com/api/products', productData, {
         headers: {
           'Content-Type': 'application/json',
           'Authorization': `Bearer ${token}`

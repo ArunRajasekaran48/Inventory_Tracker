@@ -19,7 +19,7 @@ function Register({ onRegister }) {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('https://inventory-tracker-sre9.onrender.com/api/auth/register', formData);
+      const response = await axios.post('https://inventory-tracker-0ie0.onrender.com/api/auth/register', formData);
       if (response.data.token) {
         onRegister(response.data.token);
       }
