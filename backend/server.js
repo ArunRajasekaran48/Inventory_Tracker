@@ -11,7 +11,9 @@ require('dotenv').config();
 const app = express();
 
 // Middleware
-app.use(cors());
+app.use(cors({
+    origin:'https://inventory-tracker-sigma-eight.vercel.app'
+}));
 app.use(express.json());
 
 // Connect to MongoDB
