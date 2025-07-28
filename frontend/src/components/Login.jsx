@@ -17,7 +17,7 @@ function Login({ onLogin }) {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('https://inventory-tracker-0ie0.onrender.com/api/auth/login', formData);
+      const response = await axios.post('https://inventory-tracker-4923.onrender.com/api/auth/login', formData);
       if (response.data.token) {
         onLogin(response.data.token);
       }
