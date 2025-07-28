@@ -16,7 +16,7 @@ function ProductList() {
   const fetchProducts = async () => {
     try {
       const token = localStorage.getItem('token');
-      const response = await axios.get('https://inventory-tracker-0ie0.onrender.com/api/products', {
+      const response = await axios.get('https://inventory-tracker-4923.onrender.com/api/products', {
         headers: { 'Authorization': `Bearer ${token}` }
       });
       if (response.data.success) {
