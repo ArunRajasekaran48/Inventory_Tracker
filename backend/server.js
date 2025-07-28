@@ -12,7 +12,7 @@ const app = express();
 
 // Middleware
 app.use(cors({
-  origin: "https://inventory-tracker-sigma-eight.vercel.app",
+  origin: "https://inventory-tracker-ten-eta.vercel.app",
   credentials: true
 }));
 app.use(express.json());
