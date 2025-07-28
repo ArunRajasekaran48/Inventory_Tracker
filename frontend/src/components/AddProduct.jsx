@@ -37,7 +37,7 @@ function AddProduct() {
     //  https://inventory-tracker-0ie0.onrender.com
 
       const token = localStorage.getItem('token');
-      const response = await axios.post('https://inventory-tracker-0ie0.onrender.com/api/products', productData, {
+      const response = await axios.post('https://inventory-tracker-4923.onrender.com/api/products', productData, {
         headers: {
           'Content-Type': 'application/json',
           'Authorization': `Bearer ${token}`
